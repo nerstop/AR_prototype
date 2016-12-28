@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_program"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.vind.android.ar.activity.ProgramActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="horizontal"
+            android:weightSum="7">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_weight="5"
+                    android:id="@+id/lv_program_menu"
+                    android:src="@drawable/main_menu"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="57dp"-->
+                    <!--android:layout_weight="1">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_horizontal"
+                        android:text="Program"
+                        android:textSize ="22sp"
+                        android:textColor="#00408C"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_weight="6"
+                android:id="@+id/lv_home"
+                android:src="@drawable/main_home"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/program_layout_menu"
+        android:background="#9f000000"
+        android:orientation="vertical"
+        android:visibility="invisible">
+        <!--android:visibility="invisible">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:background="@drawable/menu_box"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="46dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="21">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    android:weightSum="22">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="4"
+                        android:id="@+id/lv_program_menu_workout"
+                        android:src="@drawable/menu_workout_off"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="4"
+                        android:id="@+id/lv_program_menu_people"
+                        android:src="@drawable/menu_people_off"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:src="@drawable/menu_ranking_off"
+                        android:id="@+id/lv_program_menu_rank"
+                        android:layout_weight="4"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="21">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    android:weightSum="22">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="4"
+                        android:id="@+id/lv_program_menu_program"
+                        android:src="@drawable/menu_program_on"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="4"
+                        android:id="@+id/lv_program_menu_gift"
+                        android:src="@drawable/menu_gift_off"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:id="@+id/lv_program_menu_more"
+                        android:src="@drawable/menu_more_off"
+                        android:layout_weight="4"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/program_layout_menu_out"/>
+
+    </LinearLayout>
+</RelativeLayout>

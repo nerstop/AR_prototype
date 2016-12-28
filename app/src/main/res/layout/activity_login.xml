@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.vind.android.ar.activity.LoginActivity">
+
+    <!--폰트 적용 -->
+    <!--루트 노드에 -->
+    <!--xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+    <!--뷰 노드에-->
+    <!--custom:font="custom1"-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/intro"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="335dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="4">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:id="@+id/lv_login_id"
+                android:src="@drawable/intro_id"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="right"
+                android:layout_weight="1"
+                style="@style/FullWidthEditText"
+                android:id="@+id/et_login_id"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@drawable/line_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="4">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:id="@+id/lv_login_pw"
+                android:src="@drawable/intro_pw"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="right"
+                android:layout_weight="1"
+                style="@style/FullWidthEditText"
+                android:inputType="textPassword"
+                android:id="@+id/et_login_pw"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:id="@+id/lv_login"
+                android:src="@drawable/intro_short_login"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:id="@+id/lv_join"
+                android:src="@drawable/intro_short_join"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
