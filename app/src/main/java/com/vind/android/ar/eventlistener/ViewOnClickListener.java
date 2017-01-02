@@ -8,8 +8,11 @@ import com.vind.android.ar.R;
 import com.vind.android.ar.activity.JoinActivity;
 import com.vind.android.ar.activity.LoginActivity;
 import com.vind.android.ar.activity.MainActivity;
+import com.vind.android.ar.activity.WorkoutActivity;
 import com.vind.android.ar.fragment.JoinGeneralFragment;
 import com.vind.android.ar.fragment.JoinStudentFragment;
+import com.vind.android.ar.fragment.WorkoutDayViewFragment;
+import com.vind.android.ar.fragment.WorkoutMonthViewFragment;
 
 
 /**
@@ -61,6 +64,20 @@ public class ViewOnClickListener implements View.OnClickListener {
                 ((MainActivity) view.getContext()).ChangeWeightWiget();
                 break;
 
+            case R.id.lv_workout_day_select:
+                ((WorkoutActivity) view.getContext()).ChangeFragmentBefore((Fragment) new WorkoutMonthViewFragment(),"");
+                break;
+            case R.id.bt_day_17:
+                //Toast.makeText(view.getContext(), "10", Toast.LENGTH_SHORT).show();
+                ((WorkoutActivity) view.getContext()).ChangeFragmentBefore((Fragment) new WorkoutDayViewFragment(),"17");
+                break;
+            case R.id.bt_day_21:
+                //Toast.makeText(view.getContext(), "11", Toast.LENGTH_SHORT).show();
+                ((WorkoutActivity) view.getContext()).ChangeFragmentBefore((Fragment) new WorkoutDayViewFragment(),"21");
+                break;
+            case R.id.lv_program_plus:
+                ((WorkoutActivity) view.getContext()).RefreshFragment();
+                break;
         }
     }
 }

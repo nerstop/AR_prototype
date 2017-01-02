@@ -1,21 +1,33 @@
 package com.vind.android.ar.activity;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vind.android.ar.R;
 import com.vind.android.ar.eventlistener.ViewOnClickListener;
+import com.vind.android.ar.fragment.BaseFragment;
+import com.vind.android.ar.fragment.JoinStudentFragment;
+import com.vind.android.ar.fragment.WorkoutDayViewFragment;
+import com.vind.android.ar.fragment.WorkoutMonthViewFragment;
 
 public class WorkoutActivity extends BaseActivity implements View.OnClickListener{
 
     ImageView lv_wo_menu;
     LinearLayout wo_layout_menu;
     View wo_layout_menu_out;
+    TextView tv_curr_frag;
+    Fragment current_frag;
+    public TextView tv_selected_day;
+    public String selected_plus = "";
 
     //메뉴 버튼
     ImageView lv_wo_menu_workout, lv_wo_menu_people, lv_wo_menu_rank, lv_wo_menu_program, lv_wo_menu_gift, lv_wo_menu_more;
@@ -26,6 +38,8 @@ public class WorkoutActivity extends BaseActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
 
+
+        this.tv_curr_frag = (TextView) findViewById(R.id.tv_curr_frag);
 
 
         //메뉴 on off
@@ -54,8 +68,44 @@ public class WorkoutActivity extends BaseActivity implements View.OnClickListene
         this.lv_wo_menu_gift.setOnClickListener(this);
         this.lv_wo_menu_more.setOnClickListener(this);
 
+        this.tv_selected_day = (TextView) findViewById(R.id.tv_selected_day);
+
+
+        ChangeFragmentBefore((Fragment) new WorkoutDayViewFragment(),"");
+    }
+
+    public void RefreshFragment(){
+
+        //Toast.makeText(getApplicationContext(),fragment.toString(),Toast.LENGTH_SHORT).show();
+        this.selected_plus = "plus";
+
+        ((WorkoutDayViewFragment)current_frag).onButterfly();
+    }
+
+    public void ChangeFragmentBefore(Fragment fragment, String val) {
+        if (this.tv_curr_frag.getText().equals("")) {
+            ((WorkoutDayViewFragment) fragment).workoutActivity = this;
+            this.tv_curr_frag.setText("DAILY");
+        } else if (this.tv_curr_frag.getText().equals("DAILY")) {
+            this.tv_curr_frag.setText("MONTHLY");
+        } else if (this.tv_curr_frag.getText().equals("MONTHLY")) {
+            ((WorkoutDayViewFragment) fragment).workoutActivity = this;
+            this.tv_selected_day.setText(val);
+            this.tv_curr_frag.setText("DAILY");
+        }
+        ChangeFragment(fragment);
 
     }
+
+    public void ChangeFragment(Fragment fragment){
+        current_frag = fragment;
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment, current_frag);
+        fragmentTransaction.commit();
+
+    }
+
 
 
     public void OnMenu(){

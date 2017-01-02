@@ -5,4 +5,5 @@
 
     <dimen name="wiget_weight_height">80dp</dimen>
     <dimen name="wiget_weiget_on_height">155dp</dimen>
+
 </resources>

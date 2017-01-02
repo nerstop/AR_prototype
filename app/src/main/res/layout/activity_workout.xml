@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/workout"
         android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
@@ -47,7 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:gravity="center_horizontal"
-                        android:text="WorkOut"
+                        android:text="WORKOUT"
                         android:textSize ="22sp"
                         android:textColor="#00408C"/>
 
@@ -62,6 +63,43 @@
                 android:src="@drawable/main_home"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:textColor="#e00036"
+                android:gravity="center_horizontal"
+                android:id="@+id/tv_curr_frag"
+                android:text=""
+                android:textSize ="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="118dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.vind.android.ar.fragment.BaseFragment"
+                android:id="@+id/fragment"
+                tools:layout="@layout/fragment_base" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21"
+            android:id="@+id/tv_selected_day"
+            android:visibility="invisible"/>
     </LinearLayout>
 
 
@@ -196,4 +234,5 @@
             android:id="@+id/wo_layout_menu_out"/>
 
     </LinearLayout>
+
 </RelativeLayout>

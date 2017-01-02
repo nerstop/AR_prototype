@@ -103,7 +103,6 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_weight="1"
                     android:id="@+id/lv_weight"
                     android:src="@drawable/main_wiget_weight"/>
 
@@ -114,7 +113,6 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
-                    android:layout_weight="1"
                     android:src="@drawable/main_wiget_weekend"/>
 
                 <View
@@ -124,7 +122,6 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="81dp"
-                    android:layout_weight="1"
                     android:src="@drawable/main_wiget_timewatch"/>
 
                 <View
@@ -134,7 +131,6 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
                     android:src="@drawable/main_wiget_plus"/>
                 <!--<ImageView-->
                     <!--android:layout_width="match_parent"-->
