@@ -1,19 +1,30 @@
 package com.vind.android.ar.activity;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vind.android.ar.R;
+import com.vind.android.ar.eventlistener.ViewOnClickListener;
+import com.vind.android.ar.fragment.PeopleFriendsFragment;
+import com.vind.android.ar.fragment.PeopleGroupFragment;
 
 public class PeopleActivity extends BaseActivity implements View.OnClickListener{
 
     ImageView lv_people_menu;
     LinearLayout people_layout_menu;
     View people_layout_menu_out;
+    ImageView lv_people_friends, lv_people_group;
+    TextView tv_curr_frag;
+    Fragment current_frag;
 
     //메뉴 버튼
     ImageView lv_people_menu_workout, lv_people_menu_people, lv_people_menu_rank, lv_people_menu_program, lv_people_menu_gift, lv_people_menu_more;
@@ -25,6 +36,7 @@ public class PeopleActivity extends BaseActivity implements View.OnClickListener
         setContentView(R.layout.activity_people);
 
 
+        ViewOnClickListener viewOnClickListener = new ViewOnClickListener();
 
         //메뉴 on off
         this.lv_people_menu = (ImageView) findViewById(R.id.lv_people_menu);
@@ -53,6 +65,50 @@ public class PeopleActivity extends BaseActivity implements View.OnClickListener
         this.lv_people_menu_more.setOnClickListener(this);
 
 
+        this.lv_people_friends = (ImageView) findViewById(R.id.lv_people_friends);
+        this.lv_people_group = (ImageView) findViewById(R.id.lv_people_group);
+
+        this.lv_people_friends.setOnClickListener(viewOnClickListener);
+        this.lv_people_group.setOnClickListener(viewOnClickListener);
+
+        this.tv_curr_frag = (TextView) findViewById(R.id.tv_curr_frag);
+
+        ChangeFragment(new PeopleFriendsFragment());
+
+
+    }
+
+    public void ChangeFragment(Fragment fragment){
+        this.current_frag = fragment;
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment, this.current_frag);
+        fragmentTransaction.commit();
+
+    }
+
+    public void ChangeTabState( String val ) {
+        switch (val.toString()){
+            case "friends_on":
+                this.lv_people_friends.setImageDrawable((Drawable)getResources().getDrawable(R.drawable.people_friends_on));
+                this.lv_people_group.setImageDrawable((Drawable)getResources().getDrawable(R.drawable.people_group_off));
+                this.tv_curr_frag.setText("FRIENDS");
+                break;
+            case "group_on":
+                this.lv_people_group.setImageDrawable((Drawable)getResources().getDrawable(R.drawable.people_group_on));
+                this.lv_people_friends.setImageDrawable((Drawable)getResources().getDrawable(R.drawable.people_friends_off));
+                this.tv_curr_frag.setText("GROUP");
+                break;
+        }
+
+    }
+
+    public void GroupPollUpDown(){
+        ((PeopleGroupFragment) this.current_frag).ChangePollUpDown();
+    }
+
+    public void GroupCoinOnOff(){
+        ((PeopleGroupFragment) this.current_frag).ChangeCoinOnOff();
     }
 
 
@@ -68,6 +124,8 @@ public class PeopleActivity extends BaseActivity implements View.OnClickListener
                 break;
         }
     }
+
+
 
 
     @Override

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/people_group_pic"
+                        android:id="@+id/imageView" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="1"
+                        android:paddingTop="15dp"
+                        android:paddingLeft="15dp"
+                        android:textSize="18sp"
+                        android:textColor="#00408C"
+                        android:text="VIND"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_weight="6"
+                    android:src="@drawable/people_chat"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_group_container"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@drawable/line_gray"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:weightSum="6">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="5"
+                            android:src="@drawable/people_pic_me"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="1"
+                            android:paddingTop="15dp"
+                            android:paddingLeft="15dp"
+                            android:textSize="18sp"
+                            android:textColor="#00408C"
+                            android:text="Sohyeon Irene Kim"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="6"
+                        android:src="@drawable/people_leave"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:weightSum="6">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="5"
+                            android:src="@drawable/people_pic_m"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="1"
+                            android:paddingTop="15dp"
+                            android:paddingLeft="15dp"
+                            android:textSize="18sp"
+                            android:textColor="#00408C"
+                            android:text="Keepon Cho"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="6"
+                        android:src="@drawable/people_call_on"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:weightSum="6">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="5"
+                            android:src="@drawable/people_pic_m"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="1"
+                            android:paddingTop="15dp"
+                            android:paddingLeft="15dp"
+                            android:textSize="18sp"
+                            android:textColor="#00408C"
+                            android:text="Seongmo Jung"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="6"
+                        android:src="@drawable/people_call_on"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:weightSum="6">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="5"
+                            android:src="@drawable/people_pic_m"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_weight="1"
+                            android:paddingTop="15dp"
+                            android:paddingLeft="15dp"
+                            android:textSize="18sp"
+                            android:textColor="#00408C"
+                            android:text="Seungho Lee"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_weight="6"
+                        android:src="@drawable/people_call_on"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:id="@+id/lv_poll_UpDown"
+                android:src="@drawable/people_poll_down"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_program_container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:background="@drawable/workout_butterfly"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/lv_coin_OnOff"
+                        android:src="@drawable/people_coin_7_10"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:background="@drawable/workout_butterfly"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/people_coin_10_10"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:background="@drawable/workout_butterfly"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/people_coin_3_10"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

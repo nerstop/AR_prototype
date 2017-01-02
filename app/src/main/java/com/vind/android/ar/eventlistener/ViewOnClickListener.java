@@ -8,9 +8,12 @@ import com.vind.android.ar.R;
 import com.vind.android.ar.activity.JoinActivity;
 import com.vind.android.ar.activity.LoginActivity;
 import com.vind.android.ar.activity.MainActivity;
+import com.vind.android.ar.activity.PeopleActivity;
 import com.vind.android.ar.activity.WorkoutActivity;
 import com.vind.android.ar.fragment.JoinGeneralFragment;
 import com.vind.android.ar.fragment.JoinStudentFragment;
+import com.vind.android.ar.fragment.PeopleFriendsFragment;
+import com.vind.android.ar.fragment.PeopleGroupFragment;
 import com.vind.android.ar.fragment.WorkoutDayViewFragment;
 import com.vind.android.ar.fragment.WorkoutMonthViewFragment;
 
@@ -25,19 +28,16 @@ public class ViewOnClickListener implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.lv_login: // View(Login) -> Button(login)
-                //Toast.makeText(view.getContext(),"아직 안되",Toast.LENGTH_LONG).show();
                 ((LoginActivity) view.getContext()).LoginValidate();
                 break;
             case R.id.lv_join: // View(Login) -> Button(join)
                 ((LoginActivity) view.getContext()).openJoinUserInfo();
                 break;
             case R.id.lv_student:
-                //Fragment fragment = new JoinStudentFragment();
-               ((JoinActivity) view.getContext()).ChangeFragment((Fragment)new JoinStudentFragment(),"JoinStudentFragment");
+                ((JoinActivity) view.getContext()).ChangeFragment((Fragment)new JoinStudentFragment(),"JoinStudentFragment");
                 ((JoinActivity) view.getContext()).ChangeTabState("student_on");
                 break;
             case R.id.lv_general:
-                //Fragment fragment = new JoinGeneralFragment();
                 ((JoinActivity) view.getContext()).ChangeFragment((Fragment)new JoinGeneralFragment(),"JoinGeneralFragment");
                 ((JoinActivity) view.getContext()).ChangeTabState("general_on");
                 break;
@@ -68,15 +68,29 @@ public class ViewOnClickListener implements View.OnClickListener {
                 ((WorkoutActivity) view.getContext()).ChangeFragmentBefore((Fragment) new WorkoutMonthViewFragment(),"");
                 break;
             case R.id.bt_day_17:
-                //Toast.makeText(view.getContext(), "10", Toast.LENGTH_SHORT).show();
                 ((WorkoutActivity) view.getContext()).ChangeFragmentBefore((Fragment) new WorkoutDayViewFragment(),"17");
                 break;
             case R.id.bt_day_21:
-                //Toast.makeText(view.getContext(), "11", Toast.LENGTH_SHORT).show();
                 ((WorkoutActivity) view.getContext()).ChangeFragmentBefore((Fragment) new WorkoutDayViewFragment(),"21");
                 break;
             case R.id.lv_program_plus:
                 ((WorkoutActivity) view.getContext()).RefreshFragment();
+                break;
+
+            case R.id.lv_people_friends:
+                ((PeopleActivity) view.getContext()).ChangeFragment((Fragment)new PeopleFriendsFragment());
+                ((PeopleActivity) view.getContext()).ChangeTabState("friends_on");
+                break;
+            case R.id.lv_people_group:
+                ((PeopleActivity) view.getContext()).ChangeFragment((Fragment)new PeopleGroupFragment());
+                ((PeopleActivity) view.getContext()).ChangeTabState("group_on");
+                break;
+            case R.id.lv_poll_UpDown:
+                ((PeopleActivity) view.getContext()).GroupPollUpDown();
+                break;
+
+            case R.id.lv_coin_OnOff:
+                ((PeopleActivity) view.getContext()).GroupCoinOnOff();
                 break;
         }
     }

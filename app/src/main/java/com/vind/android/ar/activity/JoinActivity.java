@@ -27,25 +27,8 @@ public class JoinActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        // BtnOnClickListener의 객체 생성.
-        //BtnOnClickListener btnOnClickListener = new BtnOnClickListener();
-
-
-        //Button bt_confirm = (Button) findViewById(R.id.bt_confirm);
-
-        //bt_confirm.setOnClickListener(onClickListener);
-
-
-        // 각 Button의 이벤트 리스너로 onClickListener 지정.
-//        Button bt_student = (Button) findViewById(R.id.bt_student);
-//        Button bt_general = (Button) findViewById(R.id.bt_general);
-//
-//        bt_student.setOnClickListener(btnOnClickListener);
-//        bt_general.setOnClickListener(btnOnClickListener);
-
         ViewOnClickListener viewOnClickListener = new ViewOnClickListener();
 
-//         각 Button의 이벤트 리스너로 onClickListener 지정.
         this.lv_student = (ImageView) findViewById(R.id.lv_student);
         this.lv_general = (ImageView) findViewById(R.id.lv_general);
 
@@ -80,7 +63,6 @@ public class JoinActivity extends BaseActivity {
     }
 
     public void FragmentConfirm() {
-        Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_SHORT).show();
         Intent outIntent = null;
         switch(this.tv_curr_frag.getText().toString()){
             case "JoinGeneralFragment":

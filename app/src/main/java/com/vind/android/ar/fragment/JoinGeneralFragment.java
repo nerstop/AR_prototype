@@ -52,7 +52,6 @@ public class JoinGeneralFragment extends Fragment{
             case "general_gender_f_on":
                 this.lv_general_gender_m.setImageDrawable((Drawable)getResources().getDrawable(R.drawable.join_gender_m_off));
                 this.lv_general_gender_f.setImageDrawable((Drawable)getResources().getDrawable(R.drawable.join_gender_f_on));
-
                 break;
         }
 

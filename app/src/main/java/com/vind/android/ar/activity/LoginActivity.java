@@ -18,15 +18,6 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        BtnOnClickListener의 객체 생성.
-//        BtnOnClickListener btnOnClickListener = new BtnOnClickListener();
-//
-//        // 각 Button의 이벤트 리스너로 onClickListener 지정.
-//        Button bt_signin = (Button) findViewById(R.id.bt_login);
-//        Button bt_signup = (Button) findViewById(R.id.bt_join);
-//
-//        bt_signin.setOnClickListener(btnOnClickListener);
-//        bt_signup.setOnClickListener(btnOnClickListener);
 
         ViewOnClickListener viewOnClickListener = new ViewOnClickListener();
 
